@@ -122,3 +122,15 @@ entry for human review:
 - Category assigned is Other.
 - Date is missing, malformed, or in the future.
 - Duplicate transaction detected (same date + amount + description).
+
+## Category Priority Orders (highest wins on conflict)
+1. Health & Medical
+2. Education
+3. Savings & Investments
+4. Utilities
+5. Dining Out
+6. Food & Groceries
+7. Transport
+8. Shopping & Apparel
+9. Entertainment & Subscriptions
+10. Other
