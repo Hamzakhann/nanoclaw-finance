@@ -16,7 +16,7 @@ Run this on every agent output before committing or executing.
 □ Raw data in data/raw/ was never modified
 
 ## Code Quality Checks
-□ No print() statements (use logging or typer.echo())
+□ No print() statements (use logging or typer.echo() )
 □ No hardcoded file paths (use relative paths or config)
 □ Every function that touches data has at least one test
 
