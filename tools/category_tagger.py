@@ -86,6 +86,10 @@ def main() -> int:
         raw_amount = row.get("amount", "").strip()
         description = row.get("description", "").strip()
 
+        # Silently drop header rows from concatenated CSV files.
+        if raw_amount.lower() == "amount":
+            continue
+
         # Validate amount (General Rule 1: empty, zero, or non-numeric → skip)
         try:
             amount = Decimal(raw_amount)
