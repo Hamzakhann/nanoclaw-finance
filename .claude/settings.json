@@ -6,7 +6,7 @@
       "DROP TABLE",
       "TRUNCATE",
       "rm -rf",
-      "any write to data/raw/"
+      "any write to data/raw/ "
     ],
     "never_do": [
       "hardcode credentials or API keys in any file",
