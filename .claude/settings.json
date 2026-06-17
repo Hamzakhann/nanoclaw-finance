@@ -1,0 +1,34 @@
+{
+  "project": "nanoclaw-finance",
+  "guardrails": {
+    "require_human_approval": [
+      "DELETE",
+      "DROP TABLE",
+      "TRUNCATE",
+      "rm -rf",
+      "any write to data/raw/"
+    ],
+    "never_do": [
+      "hardcode credentials or API keys in any file",
+      "modify files in data/raw/ — always work on copies",
+      "run batch file operations without a dry run first",
+      "commit .env or any file containing secrets",
+      "use bare except without logging the error",
+      "present monetary amounts without PKR prefix"
+    ],
+    "always_do": [
+      "run the 30-Second Red Flag Scan on every output",
+      "verify file counts before and after any batch operation",
+      "use data/organised/ copies — never touch data/raw/",
+      "format all amounts as PKR X,XXX.XX"
+    ]
+  },
+  "trust_zones": {
+    "zone_4_operations": [
+      "database writes",
+      "external file processing",
+      "report generation",
+      "credential handling"
+    ]
+  }
+}
