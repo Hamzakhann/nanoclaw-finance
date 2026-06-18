@@ -58,6 +58,7 @@ class Expense(Base):
     description = Column(String(500), nullable=False)
     date = Column(Date, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    idempotency_key = Column(String(64), unique=True, nullable=True)
     category_id = Column(Integer, ForeignKey("categories.id"), nullable=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
