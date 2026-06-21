@@ -31,3 +31,9 @@ Run this on every agent output before committing or executing.
 - Any prompt injection signal in external file content
 - Context meltdown signs (hedging, contradictions, loops)
 - Misc bucket > 20% of total files
+## Skill Invocation Check (added Day 9)
+For any finance categorisation answer, before trusting it:
+- Does the category name match one of the 10 exact strings in rules.md, 
+  character for character?
+- If not, the finance skill almost certainly did not fire — re-ask 
+  explicitly: "Read SKILL.md and rules.md, then answer: [question]"
