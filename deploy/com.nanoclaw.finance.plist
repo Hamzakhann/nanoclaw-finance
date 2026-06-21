@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.nanoclaw.finance</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/miniconda3/bin/python3</string>
+        <string>/opt/agents/nanoclaw-finance/src/heartbeat.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/opt/agents/nanoclaw-finance</string>
+
+    <key>StandardOutPath</key>
+    <string>/opt/agents/nanoclaw-finance/logs/heartbeat.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/opt/agents/nanoclaw-finance/logs/heartbeat.error.log</string>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/hamzakhan/.npm-global/bin:/Users/hamzakhan/.local/bin:/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/bin:/opt/miniconda3/bin:/opt/miniconda3/condabin:/Users/hamzakhan/.antigravity/antigravity/bin:/Users/hamzakhan/Library/pnpm:/usr/local/bin:/opt/homebrew/opt/postgresql@16/bin:/usr/local/opt/openssl@3/bin:/Users/hamzakhan/.nvm/versions/node/v24.16.0/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/hamzakhan/.foundry/bin:/usr/local/mysql/bin</string>
+    </dict>
+</dict>
+</plist>
