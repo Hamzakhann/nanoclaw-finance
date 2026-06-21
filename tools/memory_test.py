@@ -43,6 +43,12 @@ ACTIONS = [
         "trust_level": "escalated",
         "result": "Input rejected; incident written to audit trail",
     },
+    {
+        "action_type": "categorise_transaction",
+        "target": "online order PKR 3,200.00",
+        "trust_level": "unverified_skill_bypass",
+        "result": "category not verified against rules.md — treating as unconfirmed",
+    },
 ]
 
 INSERT_KNOWLEDGE = text("""
@@ -106,7 +112,7 @@ def main() -> None:
 
     try:
         # ── 1. insert actions ──────────────────────────────────────────────
-        print("[1/4] Inserting 3 actions into action_log ...")
+        print("[1/4] Inserting 4 actions into action_log ...")
         with engine.begin() as conn:
             for row in ACTIONS:
                 result = conn.execute(INSERT_ACTION, row).mappings().one()

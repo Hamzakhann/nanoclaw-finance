@@ -7,8 +7,8 @@ CREATE TABLE IF NOT EXISTS action_log (
     id          SERIAL PRIMARY KEY,
     action_type VARCHAR(50)  NOT NULL,
     target      VARCHAR(200),
-    trust_level VARCHAR(20)  NOT NULL
-                    CHECK (trust_level IN ('auto_approved', 'needs_approval', 'escalated')),
+    trust_level VARCHAR(40)  NOT NULL
+                    CHECK (trust_level IN ('auto_approved', 'needs_approval', 'escalated', 'unverified_skill_bypass')),
     result      TEXT,
     created_at  TIMESTAMPTZ  NOT NULL DEFAULT NOW()
 );
