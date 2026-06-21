@@ -1,4 +1,15 @@
 
+# Bronze Tier Evaluation
+
+- [x] groups/main/CLAUDE.md defines clear identity and authority
+- [x] SKILL.md has 5+ domain rules, all traceable to rules.md
+- [x] Skill fires correctly on finance queries, stays silent on unrelated ones
+- [x] conversation-log.md has 3+ real logged interactions
+
+## Reflection
+[Write 2-3 honest sentences: what worked, what surprised you]
+
+
 ## Known Limitation — Skill Auto-Triggering (discovered Day 9)
 Simple, single-line categorisation questions sometimes bypass the 
 finance skill entirely and get answered from general model knowledge,
