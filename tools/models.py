@@ -4,8 +4,10 @@ from decimal import Decimal
 
 from dotenv import load_dotenv
 from sqlalchemy import (
+    BigInteger,
     create_engine,
     Column,
+    Index,
     Integer,
     String,
     Date,
@@ -29,9 +31,14 @@ class User(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(100), nullable=False)
     email = Column(String(200), unique=True, nullable=False)
+    telegram_chat_id = Column(BigInteger, nullable=True, unique=True)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
 
     expenses = relationship("Expense", back_populates="user")
+
+    __table_args__ = (
+        Index("ix_users_telegram_chat_id", "telegram_chat_id"),
+    )
 
     def __repr__(self) -> str:
         return f"<User id={self.id} name={self.name!r} email={self.email!r}>"

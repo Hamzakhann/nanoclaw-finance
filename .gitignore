@@ -19,3 +19,6 @@ Thumbs.db
 
 # Claude local logs
 .claude/audit.log
+
+# Logs
+logs/
